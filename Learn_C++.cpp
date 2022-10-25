@@ -44,15 +44,18 @@ public: //This Public accessable in or outside class.
 class CookingYoutubeChannel:public YoutubeChannel {
 public:
     CookingYoutubeChannel(string name, string ownerName):YoutubeChannel(name, ownerName) {}
+    void practice() {
+        cout << ownerChannel << " is pracicing cooking, learning new recepies, experimenting with spices..." << endl;
+    }
 };
 
 int main()
 {
-    CookingYoutubeChannel ytChannel("Giveonaldo", "Aldo");
-    ytChannel.GetInfo();
-
-
-
+    CookingYoutubeChannel cookingYtChannel("Giveonaldo", "Aldo");
+    cookingYtChannel.publishVideo("How to eat trash!!!");
+    cookingYtChannel.GetInfo();
+    cookingYtChannel.practice();
+    
     system("pause>0");
 }
 
